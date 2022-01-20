@@ -23,7 +23,9 @@
 	max-width: 1100px;
 	margin: auto;
 }
-
+// body {
+// 	overflow: hidden;
+// }
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -63,10 +65,13 @@
 			display: none;
 		}
 	}
+	// .fixed {
+	// 	position: fixed;
+	// }
 
 	.active {
 		// display: none;
-		position: absolute;
+		position: fixed;
 		width: 100%;
 		// height: calc(100vh - 100px);
 		height: 100vh;
@@ -78,7 +83,7 @@
 		background: var(--Very-Dark-Violet);
 		z-index: 100;
 
-		overflow-y: hidden;
+		overflow: hidden;
 
 		li {
 			font-weight: 700;
@@ -185,6 +190,10 @@
 	}
 	.mobile-img {
 		width: 100%;
+
+		img {
+			object-fit: contain;
+		}
 		@media screen and (min-width: 501px) {
 			display: none;
 		}
@@ -392,12 +401,14 @@
 	color: #fff;
 	position: relative;
 	// max-height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
 	@media screen and (min-width: 768px) {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		// text-align: left;
+		flex-direction: row;
 		// padding: 0 50px;
 	}
 	h2 {
@@ -408,8 +419,8 @@
 		font-family: "DM Serif Display", serif;
 
 		@media screen and (min-width: 768px) {
-			width: 50%;
-			// margin-left: 10%;
+			// width: 50%;
+			margin-left: 10%;
 			text-align: left;
 		}
 	}
@@ -420,10 +431,15 @@
 		border: 1px solid #fff;
 		text-transform: uppercase;
 		margin: 30px 0;
-		margin-right: 10%;
 		// height: 30px;
 		font-weight: 700;
+		overflow: hidden;
+		min-width: 200px;
 		z-index: 1;
+
+		@media screen and (min-width: 768px) {
+			margin-right: 10%;
+		}
 	}
 	.work-btn:hover {
 		background: #fff;
@@ -435,19 +451,19 @@
 	content: "";
 	position: absolute;
 	top: 0;
-	right: -12px;
+	right: -10px;
 	background: url("/images/bg-pattern-how-we-work-mobile.svg  ") no-repeat
 		center center / contain;
 	width: 200px;
 	height: 100%;
-
+	
 	@media screen and (min-width: 768px) {
+		z-index: 0;	
+		right: 0;
 		background: url("/images/bg-pattern-how-we-work-desktop.svg  ") no-repeat
 			center center / cover;
 		width: 40%;
 		height: 100%;
-		right: 0;
-		z-index: 0;
 		// display: none;
 	}
 }
