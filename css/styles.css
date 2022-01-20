@@ -88,26 +88,29 @@
   overflow-y: hidden;
 }
 
-.navbar .active li a {
-  color: #fff;
+.navbar .active li {
   font-weight: 700;
   padding: 15px 0;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
-.navbar .active li a:first-child {
+.navbar .active li a {
+  color: #fff;
+}
+
+.navbar .active li:first-child {
   margin-top: 30px;
 }
 
-.navbar .active li a:last-child {
+.navbar .active li:last-child {
   border: 1px solid #fff;
   width: 90%;
   margin: auto;
   position: relative;
 }
 
-.navbar .active li a:last-child::after {
+.navbar .active li:last-child::after {
   content: "";
   position: absolute;
   top: -80px;
@@ -118,7 +121,7 @@
 }
 
 @media screen and (min-width: 608px) {
-  .navbar .active li a:last-child::after {
+  .navbar .active li:last-child::after {
     display: none;
   }
 }
@@ -278,6 +281,7 @@
   position: absolute;
   height: 120px;
   width: 120px;
+  background-image: url("/images/bg-pattern-intro-left-mobile.svg");
   background: url("/images/bg-pattern-intro-left-mobile.svg") no-repeat center center/contain;
   top: 0;
   left: 0;

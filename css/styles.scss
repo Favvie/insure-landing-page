@@ -80,26 +80,28 @@
 
 		overflow-y: hidden;
 
-		li a {
-			color: #fff;
+		li {
 			font-weight: 700;
 			padding: 15px 0;
 			text-transform: uppercase;
 			margin-bottom: 20px;
 		}
 
-		li a:first-child {
+		li a {
+			color: #fff;
+		}
+		li:first-child {
 			margin-top: 30px;
 		}
 
-		li a:last-child {
+		li:last-child {
 			border: 1px solid #fff;
 			width: 90%;
 			margin: auto;
 			position: relative;
 		}
 
-		li a:last-child::after {
+		li:last-child::after {
 			content: "";
 			position: absolute;
 			top: -80px;
@@ -244,6 +246,7 @@
 		position: absolute;
 		height: 120px;
 		width: 120px;
+		background-image: url("/images/bg-pattern-intro-left-mobile.svg");
 		background: url("/images/bg-pattern-intro-left-mobile.svg") no-repeat center
 			center / contain;
 		top: 0;
